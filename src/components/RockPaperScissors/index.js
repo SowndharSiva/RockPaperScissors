@@ -3,7 +3,6 @@ import {RiCloseLine} from 'react-icons/ri'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import GameOptions from '../GameOptions'
-
 import {
   AppContainer,
   ResultContainer,
@@ -56,7 +55,7 @@ class RockPaperScissors extends Component {
 
   getGameChoice = () => {
     const {choicesList} = this.props
-    const gameChoicesList = choicesList.map(choice => choice.map)
+    const gameChoicesList = choicesList.map(choice => choice.id)
     const randomNumber = Math.floor(Math.random() * 3)
     return gameChoicesList[randomNumber]
   }
@@ -136,14 +135,14 @@ class RockPaperScissors extends Component {
           <GameUserOptionContainer>
             <GameParticipantText>You</GameParticipantText>
             <GameParticipantChoiceImage
-              src={userChoiceObject.image}
+              src={userChoiceObject.imageUrl}
               alt="your choice"
             />
           </GameUserOptionContainer>
           <GameUserOptionContainer>
             <GameParticipantText>Other</GameParticipantText>
             <GameParticipantChoiceImage
-              src={gameChoiceObject.image}
+              src={gameChoiceObject.imageUrl}
               alt="opponent choice"
             />
           </GameUserOptionContainer>
@@ -173,14 +172,14 @@ class RockPaperScissors extends Component {
           <GameUserOptionContainer>
             <GameParticipantText>You</GameParticipantText>
             <GameParticipantChoiceImage
-              src={userChoiceObject.image}
+              src={userChoiceObject.imageUrl}
               alt="your choice"
             />
           </GameUserOptionContainer>
           <GameUserOptionContainer>
             <GameParticipantText>Other</GameParticipantText>
             <GameParticipantChoiceImage
-              src={gameChoiceObject.image}
+              src={gameChoiceObject.imageUrl}
               alt="opponent choice"
             />
           </GameUserOptionContainer>
@@ -210,14 +209,14 @@ class RockPaperScissors extends Component {
           <GameUserOptionContainer>
             <GameParticipantText>You</GameParticipantText>
             <GameParticipantChoiceImage
-              src={userChoiceObject.image}
+              src={userChoiceObject.imageUrl}
               alt="your choice"
             />
           </GameUserOptionContainer>
           <GameUserOptionContainer>
             <GameParticipantText>Other</GameParticipantText>
             <GameParticipantChoiceImage
-              src={gameChoiceObject.image}
+              src={gameChoiceObject.imageUrl}
               alt="opponent choice"
             />
           </GameUserOptionContainer>
